@@ -47,6 +47,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  animation: hover-back 0.5s forwards; /* 'forwards' keeps it at the white state */
 }
 
 .phoneBtn {
@@ -57,9 +58,8 @@ body {
 
 /* button nav hover */
 .navBtn:hover {
-  animation: hover-pop 0.5s forwards; /* 'forwards' keeps it at the white state */
+  animation: hover-pop 0.3s forwards; /* 'forwards' keeps it at the white state */
   color: var(--color-text); /* Text turns dark to be readable on white */
-  gap: 15px;
 }
 @keyframes hover-pop {
   0% {
@@ -68,6 +68,7 @@ body {
     box-shadow:
       1px 1px 2px var(--button-stork-orange),
       -1px -1px 2px var(--button-stork-orange);
+    gap: 0px;
   }
   100% {
     background-color: var(--color-bg); /* Final State */
@@ -75,6 +76,46 @@ body {
     box-shadow:
       1px 1px 2px var(--button-stork-blue),
       -1px -1px 2px var(--button-stork-blue);
+    gap: 12px;
   }
+}
+@keyframes hover-back {
+  0% {
+    background-color: var(--color-bg); /* Final State */
+    border: 2px solid var(--button-stork-blue);
+    box-shadow:
+      1px 1px 2px var(--button-stork-blue),
+      -1px -1px 2px var(--button-stork-blue);
+    gap: 15px;
+  }
+  90% {
+    border: 2px solid var(--button-stork-orange);
+
+    box-shadow:
+      1px 1px 2px var(--button-stork-orange),
+      -1px -1px 2px var(--button-stork-orange);
+    gap: 12px;
+  }
+  100% {
+    border: none;
+  }
+}
+/* SMALL NAVBAR  */
+.toggleIcon {
+  border: none;
+  width: 24px;
+  background: none;
+  margin-left: 4px;
+  color: var(--color-text);
+}
+.offcanvasList a {
+  gap: 16px;
+  font-size: var(--fs-40);
+  color: var(--color-text-blue-offcanvas);
+}
+.offcanvasList a:active {
+  font-size: var(--fs-40);
+  color: var(--color-text);
+  font-weight: var(--fw-bold);
 }
 /* NAVBAR END */
