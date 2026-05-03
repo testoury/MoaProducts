@@ -1,0 +1,58 @@
+@import "root.css"; /* ROOT CSS */
+@import "../Fonts/Satoshi/Fonts/WEB/css/satoshi.css " /* BASE CSS */;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-black);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: var(--lh-normal);
+}
+
+/* NAVBAR START */
+.navbar {
+  width: min-content(1439px, 80%);
+  margin-left: 2px;
+  height: 80px;
+  margin-top: 66px;
+  outline: 1px solid var(--outline-storke);
+}
+#Logo {
+  font-family: var(--font-family-black);
+  font-size: var(--fs-14);
+  margin-left: 83px;
+  width: 672px;
+}
+
+.links {
+  width: 251;
+}
+
+.navBtn {
+  width: 258px;
+  height: 48px;
+  padding: 12px;
+  border-radius: 9999px;
+  background-color: var(--color-orange-mid);
+  color: var(--color-orange-soft);
+  border: 0;
+  font-size: var(--fs-18);
+  letter-spacing: -1%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.phoneBtn {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* NAVBAR END */
