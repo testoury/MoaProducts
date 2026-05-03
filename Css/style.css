@@ -55,4 +55,26 @@ body {
   flex-shrink: 0;
 }
 
+/* button nav hover */
+.navBtn:hover {
+  animation: hover-pop 0.5s forwards; /* 'forwards' keeps it at the white state */
+  color: var(--color-text); /* Text turns dark to be readable on white */
+  gap: 15px;
+}
+@keyframes hover-pop {
+  0% {
+    border: 2px solid var(--button-stork-orange);
+
+    box-shadow:
+      1px 1px 2px var(--button-stork-orange),
+      -1px -1px 2px var(--button-stork-orange);
+  }
+  100% {
+    background-color: var(--color-bg); /* Final State */
+    border: 2px solid var(--button-stork-blue);
+    box-shadow:
+      1px 1px 2px var(--button-stork-blue),
+      -1px -1px 2px var(--button-stork-blue);
+  }
+}
 /* NAVBAR END */
