@@ -108,14 +108,17 @@ body {
   margin-left: 4px;
   color: var(--color-text);
 }
+
 .offcanvasList a {
-  gap: 16px;
   font-size: var(--fs-40);
   color: var(--color-text-blue-offcanvas);
+  font-family: var(--font-family-regular);
+  padding: 0;
 }
-.offcanvasList a:active {
+.offcanvasList a.active {
   font-size: var(--fs-40);
   color: var(--color-text);
-  font-weight: var(--fw-bold);
+  font-family: var(--font-family-black);
 }
+
 /* NAVBAR END */
